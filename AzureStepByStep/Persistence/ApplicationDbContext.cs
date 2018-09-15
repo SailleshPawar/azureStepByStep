@@ -28,7 +28,7 @@ namespace AzureStepByStep.Persistence
 
             
             var optionsBuilder = new DbContextOptionsBuilder<ApplicationDbContext>();
-            optionsBuilder.UseSqlServer("Data Source=devazurestepbystep.database.windows.net;Initial Catalog=azureDB;Persist Security Info=True;User ID=administrator_05; Password=Angular@2018;");
+            optionsBuilder.UseSqlServer("db connection");
 
             return new ApplicationDbContext(optionsBuilder.Options);
         }
