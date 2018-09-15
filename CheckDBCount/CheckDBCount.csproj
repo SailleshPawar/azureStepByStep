@@ -320,7 +320,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
     <None Include="packages.config" />
     <None Include="Properties\PublishProfiles\StepByStepWebApp - FTP.pubxml" />
     <None Include="Properties\PublishProfiles\StepByStepWebApp - Web Deploy.pubxml" />
