@@ -1,0 +1,328 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Microsoft.VisualStudio.Web.CodeGenerators.Mvc</name>
+    </assembly>
+    <members>
+        <member name="M:Microsoft.VisualStudio.Web.CodeGenerators.Mvc.Areas.AreaGenerator.EnsureFolderLayout(Microsoft.VisualStudio.Web.CodeGenerators.Mvc.Areas.AreaGeneratorCommandLine)">
+            <summary>
+            Creates a folder hierarchy:
+                ProjectDir
+                   \ Areas
+                       \ AreaName
+                           \ Controllers
+                           \ Data
+                           \ Models
+                           \ Views
+            </summary>
+        </member>
+        <member name="T:Microsoft.VisualStudio.Web.CodeGenerators.Mvc.CommonGeneratorBase">
+            <summary>
+            Common generator functionality for Controllers and Views
+            </summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.Web.CodeGenerators.Mvc.RequiredFileEntity.TemplateName">
+            <summary>
+            Name of the template file.
+            </summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.Web.CodeGenerators.Mvc.RequiredFileEntity.OutputPath">
+            <summary>
+            Path Relative to the .csproj file
+            </summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.Web.CodeGenerators.Mvc.RequiredFileEntity.AltPaths">
+            <summary>
+            A list of other paths to check for file existence - to avoid generating new versions of existing files when not appropriate).
+            </summary>
+        </member>
+        <member name="T:Microsoft.VisualStudio.Web.CodeGenerators.Mvc.Controller.MvcController">
+            <summary>
+            MvcController class provides basic functionality for scaffolding an MVC controller. 
+            The specific type of controller (Empty, Controller with read write actions etc, need to provide the template names to be used for scaffolding.
+            </summary>
+        </member>
+        <member name="T:Microsoft.VisualStudio.Web.CodeGenerators.Mvc.Dependency.DependencyGenerator">
+            <summary>
+            This is create to test the functionality but this should go away perhaps.
+            For testing using this just make this class implement ICodeGenerator interface.
+            Eventually this class should just be removed.
+            </summary>
+        </member>
+        <member name="M:Microsoft.VisualStudio.Web.CodeGenerators.Mvc.Identity.IdentityGenerator.EnsureFolderLayout(System.String,Microsoft.VisualStudio.Web.CodeGenerators.Mvc.Identity.IdentityGeneratorTemplateModel)">
+            <summary>
+            Creates a folder hierarchy:
+                ProjectDir
+                   \ Areas
+                       \ IdentityAreaName
+                           \ Data
+                           \ Pages
+                           \ Services
+            </summary>
+        </member>
+        <member name="M:Microsoft.VisualStudio.Web.CodeGenerators.Mvc.Identity.IdentityGeneratorFilesConfig.GetViewImports(System.Collections.Generic.IEnumerable{Microsoft.VisualStudio.Web.CodeGenerators.Mvc.Identity.IdentityGeneratorFile},Microsoft.VisualStudio.Web.CodeGeneration.IFileSystem,System.String)">
+            <summary>
+            Returns a list of ViewImport template files based on the files to generate and also on which _ViewImports already exist in the project.
+            We start from the innermost directory requested, if a _ViewImports file exists at this level, we are done.
+            If not, we add one to be generated and then look in the outer directory.
+            Sequence is: 
+               - Account.Manage._ViewImports
+               - Account._ViewImports
+               - _ViewImports
+            </summary>
+        </member>
+        <member name="T:Microsoft.VisualStudio.Web.CodeGenerators.Mvc.MessageStrings">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.Web.CodeGenerators.Mvc.MessageStrings.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.Web.CodeGenerators.Mvc.MessageStrings.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.Web.CodeGenerators.Mvc.MessageStrings.AddedController">
+            <summary>
+              Looks up a localized string similar to Added Controller : &apos;{0}&apos;..
+            </summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.Web.CodeGenerators.Mvc.MessageStrings.AdditionalStepsRequired">
+            <summary>
+              Looks up a localized string similar to There are probably still some manual steps required..
+            </summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.Web.CodeGenerators.Mvc.MessageStrings.CheckoutReadMe">
+            <summary>
+              Looks up a localized string similar to Checkout the &apos;{0}&apos; file that got generated..
+            </summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.Web.CodeGenerators.Mvc.MessageStrings.CompilationFailedMessage">
+            <summary>
+              Looks up a localized string similar to Failed to compile the project in memory{0}{1}.
+            </summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.Web.CodeGenerators.Mvc.MessageStrings.ControllerNameRequired">
+            <summary>
+              Looks up a localized string similar to Controller Name is required.
+            </summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.Web.CodeGenerators.Mvc.MessageStrings.DbContextNeedsToInheritFromIdentityContextMessage">
+            <summary>
+              Looks up a localized string similar to DbContext type '{0}' is found but it does not inherit from '{1}'.
+            </summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.Web.CodeGenerators.Mvc.MessageStrings.DbContextOptionDesc">
+            <summary>
+              Looks up a localized string similar to DbContext class to use..
+            </summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.Web.CodeGenerators.Mvc.MessageStrings.DefaultLayoutSwitchDesc">
+            <summary>
+              Looks up a localized string similar to Switch to specify that default layout should be used for the views..
+            </summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.Web.CodeGenerators.Mvc.MessageStrings.EmptyControllerNameRequired">
+            <summary>
+              Looks up a localized string similar to Controller name is required for an Empty Controller.
+            </summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.Web.CodeGenerators.Mvc.MessageStrings.ExistingDbContextCannotBeUsedForDefaultUI">
+            <summary>
+              Looks up a localized string similar to Cannot use an existing DbContext with the '--useDefaultUI' option..
+            </summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.Web.CodeGenerators.Mvc.MessageStrings.FileExists_useforce">
+            <summary>
+              Looks up a localized string similar to The file {0} exists, use -f option to overwrite.
+            </summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.Web.CodeGenerators.Mvc.MessageStrings.ForceOptionDesc">
+            <summary>
+              Looks up a localized string similar to Specify whether to overwrite existing files..
+            </summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.Web.CodeGenerators.Mvc.MessageStrings.InstallEfPackages">
+            <summary>
+              Looks up a localized string similar to To scaffold controllers and views using models please install Entity Framework core packages and try again: {0}.
+            </summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.Web.CodeGenerators.Mvc.MessageStrings.InstallPackagesForScaffoldingIdentity">
+            <summary>
+              Looks up a localized string similar to Please install the following packages to your project for scaffolding identity: {0}.
+            </summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.Web.CodeGenerators.Mvc.MessageStrings.InstallPackageMessage">
+            <summary>
+              Looks up a localized string similar to Please install the below packages to your project:.
+            </summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.Web.CodeGenerators.Mvc.MessageStrings.InvalidDbContextClassName">
+            <summary>
+              Looks up a localized string similar to Value of --dbContext '{0}' is not a valid class name..
+            </summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.Web.CodeGenerators.Mvc.MessageStrings.InvalidFilesListMessage">
+            <summary>
+              Looks up a localized string similar to Could not find the files below. (Please use '--listFiles' to check the list of available files).
+            </summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.Web.CodeGenerators.Mvc.MessageStrings.InvalidOptionCombination">
+            <summary>
+              Looks up a localized string similar to Option '{0}' cannot be used with '{1}'..
+            </summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.Web.CodeGenerators.Mvc.MessageStrings.InvalidUserClassName">
+            <summary>
+              Looks up a localized string similar to Value of --userClass '{0}' is not a valid class name..
+            </summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.Web.CodeGenerators.Mvc.MessageStrings.InvalidNamespaceName">
+            <summary>
+              Looks up a localized string similar to The namespace name &apos;{0}&apos; is not valid..
+            </summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.Web.CodeGenerators.Mvc.MessageStrings.InvalidViewTemplateName">
+            <summary>
+              Looks up a localized string similar to The template name &apos;{0}&apos; is not valid. Supported view templates: &apos;Empty|Create|Edit|Delete|Details|List&apos;&quot;.
+            </summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.Web.CodeGenerators.Mvc.MessageStrings.LayoutOptionsDesc">
+            <summary>
+              Looks up a localized string similar to Custom Layout page to use..
+            </summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.Web.CodeGenerators.Mvc.MessageStrings.ModelClassOptionDesc">
+            <summary>
+              Looks up a localized string similar to Model class to use..
+            </summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.Web.CodeGenerators.Mvc.MessageStrings.ModelClassRequiredForTemplate">
+            <summary>
+              Looks up a localized string similar to The &apos;{0}&apos; template cannot be used without specifying a model class. Please provide a model using &apos;--model&apos; option..
+            </summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.Web.CodeGenerators.Mvc.MessageStrings.MultipleTypesMatchingName">
+            <summary>
+              Looks up a localized string similar to Multiple types matching the name {0} exist:{1}, please use a fully qualified name&quot;.
+            </summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.Web.CodeGenerators.Mvc.MessageStrings.NamespaceOptionDesc">
+            <summary>
+              Looks up a localized string similar to Specify the name of the namespace to use for the generated controller..
+            </summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.Web.CodeGenerators.Mvc.MessageStrings.OutDirOptionDesc">
+            <summary>
+              Looks up a localized string similar to Specify the relative output folder path from project where the file needs to be generated, if not specified, file will be generated in the project folder..
+            </summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.Web.CodeGenerators.Mvc.MessageStrings.PageModelFlagNotSupported">
+            <summary>
+              Looks up a localized string similar to &apos;--noPageModel&apos; flag cannot be used for scaffolding model based Razor Pages..
+            </summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.Web.CodeGenerators.Mvc.MessageStrings.ProvideValidArgument">
+            <summary>
+              Looks up a localized string similar to Please provide a valid {0}.
+            </summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.Web.CodeGenerators.Mvc.MessageStrings.RazorPageNameRequired">
+            <summary>
+              Looks up a localized string similar to Pazor Page Name is required..
+            </summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.Web.CodeGenerators.Mvc.MessageStrings.ReadmeGenerationFailed">
+            <summary>
+              Looks up a localized string similar to Failed to generate a readme: {0}.
+            </summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.Web.CodeGenerators.Mvc.MessageStrings.Scaffolding_additionalSteps">
+            <summary>
+              Looks up a localized string similar to There may be additional steps required for the generated code to work. Refer to &lt;forward-link&gt;.
+            </summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.Web.CodeGenerators.Mvc.MessageStrings.ScaffoldingSuccessful_unregistered">
+            <summary>
+              Looks up a localized string similar to Scaffolding generated all the code but the new context created could not be registered using dependency injection..
+            </summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.Web.CodeGenerators.Mvc.MessageStrings.ScriptsOptionDesc">
+            <summary>
+              Looks up a localized string similar to Switch to specify whether to reference script libraries in the generated views..
+            </summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.Web.CodeGenerators.Mvc.MessageStrings.String1">
+            <summary>
+              Looks up a localized string similar to Failed to generate readme file at &apos;{0}&apos;..
+            </summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.Web.CodeGenerators.Mvc.MessageStrings.TemplateNameRequired">
+            <summary>
+              Looks up a localized string similar to The TemplateName cannot be empty.
+            </summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.Web.CodeGenerators.Mvc.MessageStrings.TypeDoesNotExist">
+            <summary>
+              Looks up a localized string similar to A type with the name {0} does not exist.
+            </summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.Web.CodeGenerators.Mvc.MessageStrings.UseForceOption">
+            <summary>
+              Looks up a localized string similar to The below files exist. Use '--force' to overwrite: {0}.
+            </summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.Web.CodeGenerators.Mvc.MessageStrings.UserClassAndDbContextCannotBeSpecifiedTogether">
+            <summary>
+              Looks up a localized string similar to '--userClass' cannot be used to specify a user class when using an existing DbContext..
+            </summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.Web.CodeGenerators.Mvc.MessageStrings.UserClassCouldNotBeDetermined">
+            <summary>
+              Looks up a localized string similar to Could not determine the user class from the DbContext class '{0}'.
+            </summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.Web.CodeGenerators.Mvc.MessageStrings.ValidationSuccessfull_modelUnset">
+            <summary>
+              Looks up a localized string similar to Validation succeded but model type not set.
+            </summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.Web.CodeGenerators.Mvc.MessageStrings.ViewNameRequired">
+            <summary>
+              Looks up a localized string similar to The ViewName cannot be empty..
+            </summary>
+        </member>
+        <member name="M:Microsoft.VisualStudio.Web.CodeGenerators.Mvc.NameSpaceUtilities.GetSafeNameSpaceName(System.String)">
+            <summary>
+            Converts a namespace name to a safe namespace name.
+            </summary>
+        </member>
+        <member name="M:Microsoft.VisualStudio.Web.CodeGenerators.Mvc.NameSpaceUtilities.GetSafeNameSpaceFromPath(System.String,System.String)">
+            <summary>
+            Converts a path like a/b/c/d to namespace like a.b.c.d
+            </summary>
+        </member>
+        <member name="M:Microsoft.VisualStudio.Web.CodeGenerators.Mvc.RoslynUtilities.CreateEscapedIdentifier(System.String)">
+            <summary>
+            Creates an escaped identifier if the identifier is a keyword (or contextual keyword) in C#.
+            </summary>
+            <param name="identifier"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.VisualStudio.Web.CodeGenerators.Mvc.View.EFModelBasedViewScaffolder.GenerateViews(System.Collections.Generic.Dictionary{System.String,System.String},Microsoft.VisualStudio.Web.CodeGenerators.Mvc.View.ViewGeneratorModel,Microsoft.VisualStudio.Web.CodeGenerators.Mvc.ModelTypeAndContextModel,System.String)">
+            <summary>
+            Method exposed for adding multiple views in one operation.
+            Utilised by the ControllerWithContextGenerator which generates 5 views for a MVC controller with context.
+            </summary>
+            <param name="viewsAndTemplates">Names of views and the corresponding template names</param>
+            <param name="viewGeneratorModel">Model for View Generator</param>
+            <param name="modelTypeAndContextModel">Model Type and DbContext metadata</param>
+            <param name="baseOutputPath">Folder where all views will be generated</param>
+        </member>
+    </members>
+</doc>
