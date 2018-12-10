@@ -1,0 +1,17 @@
+DiagnosticsPluginLauncher.exe Information: 0 : [9/22/2018 12:34:47 PM] Emulator config file set to D:\Demos\AzureStepByStep\AzureCloudServiceStepByStep\csx\Debug\roles\AzureStepByStepWebRole\approot\diagnostics.wadcfgx
+DiagnosticsPluginLauncher.exe Information: 0 : [9/22/2018 12:34:47 PM] DiagnosticsStoreRootPath set to: C:\Users\Saillesh\AppData\Local\dftmp\Resources\fd0e1a98-dc02-49db-bdd5-38dd753486db
+DiagnosticsPluginLauncher.exe Information: 0 : [9/22/2018 12:34:47 PM] Loading config file: D:\Demos\AzureStepByStep\AzureCloudServiceStepByStep\csx\Debug\roles\AzureStepByStepWebRole\approot\diagnostics.wadcfgx
+DiagnosticsPluginLauncher.exe Information: 0 : [9/22/2018 12:34:47 PM] Config file to read: D:\Demos\AzureStepByStep\AzureCloudServiceStepByStep\csx\Debug\roles\AzureStepByStepWebRole\approot\diagnostics.wadcfgx
+DiagnosticsPluginLauncher.exe Information: 0 : [9/22/2018 12:34:47 PM] Checking VM Type
+DiagnosticsPluginLauncher.exe Information: 0 : [9/22/2018 12:34:47 PM] Emulator config file set to D:\Demos\AzureStepByStep\AzureCloudServiceStepByStep\csx\Debug\roles\AzureStepByStepWebRole\approot\diagnostics.wadcfgx
+DiagnosticsPluginLauncher.exe Information: 0 : [9/22/2018 12:34:47 PM] Extension set to Emulator Mode
+DiagnosticsPluginLauncher.exe Information: 0 : [9/22/2018 12:34:47 PM] Reading XML configuration file
+DiagnosticsPluginLauncher.exe Information: 0 : [9/22/2018 12:34:47 PM] Bypassing private config decryption
+DiagnosticsPluginLauncher.exe Information: 0 : [9/22/2018 12:34:47 PM] Stopping the running plugin, if any
+DiagnosticsPluginLauncher.exe Information: 0 : [9/22/2018 12:34:48 PM] No DiagnosticsPlugin is running.
+DiagnosticsPluginLauncher.exe Information: 0 : [9/22/2018 12:34:48 PM] Killing any DiagnosticsPlugin that might remain.
+DiagnosticsPluginLauncher.exe Information: 0 : [9/22/2018 12:34:48 PM] Killing any MonAgentHost that might remain.
+DiagnosticsPluginLauncher.exe Information: 0 : [9/22/2018 12:34:48 PM] Diagnostics plugin stopped successfully
+DiagnosticsPluginLauncher.exe Information: 0 : [9/22/2018 12:34:48 PM] Resetting DiagnosticPlugin
+DiagnosticsPluginLauncher.exe Information: 0 : [9/22/2018 12:35:59 PM] DiagnosticsPlugin launched successfully with new configuration
+DiagnosticsPluginLauncher.exe Information: 0 : [9/22/2018 12:35:59 PM] DiagnosticPlugin exited with code 0

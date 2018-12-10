@@ -28,7 +28,7 @@ namespace AzureStepByStep.Persistence
 
             
             var optionsBuilder = new DbContextOptionsBuilder<ApplicationDbContext>();
-            optionsBuilder.UseSqlServer("db connection");
+            optionsBuilder.UseSqlServer("DefaultConnection");
 
             return new ApplicationDbContext(optionsBuilder.Options);
         }

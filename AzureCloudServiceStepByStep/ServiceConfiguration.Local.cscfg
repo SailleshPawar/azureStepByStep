@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ServiceConfiguration serviceName="AzureCloudServiceStepByStep" xmlns="http://schemas.microsoft.com/ServiceHosting/2008/10/ServiceConfiguration" osFamily="5" osVersion="*" schemaVersion="2015-04.2.6">
+  <Role name="AzureStepByStepWebRole">
+    <Instances count="1" />
+    <ConfigurationSettings>
+      <Setting name="Microsoft.WindowsAzure.Plugins.Diagnostics.ConnectionString" value="UseDevelopmentStorage=true" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteAccess.Enabled" value="true" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteAccess.AccountUsername" value="sailleshp" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteAccess.AccountEncryptedPassword" value="MIIBnQYJKoZIhvcNAQcDoIIBjjCCAYoCAQAxggFOMIIBSgIBADAyMB4xHDAaBgNVBAMME1dpbmRvd3MgQXp1cmUgVG9vbHMCEFKqsA08zHiQRhbcHjlLtF8wDQYJKoZIhvcNAQEBBQAEggEAWrGrew4+cdJZtuZWI1n7UxzZ1tazB34XqQrYXVknDpMjUnuwZ7zgBVox6FzQ3kOxm2p+PPTfxCiaAKNAPT0ApYChOtbEczkX22Fafki9clY9cwU3Vg0TpsMerBw9f35NoWPza/DS/28tXvZVoaiZyD/4XZc65VEVhTqt4D2jEYLms2uLzTaPoPpUtQoL9eiOQ6JOo036lQf36XnoLTJCMWuN9PzyczlDru3iHWtkAtBjbAmP8RYWW+/hsVBvZm6nGhcBANCNXDPQih2PZ4z6fLXX/N+8IzfBSnWOYtMDsPMc4FT0IZnpwCNrCWECNqeGRLuTocMsND5NbCcXmg+QGDAzBgkqhkiG9w0BBwEwFAYIKoZIhvcNAwcECLtVui7vQvSTgBDL5ixuSxeEpAbW9t0fhyOL" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteAccess.AccountExpiration" value="2019-09-22T23:59:59.0000000-07:00" />
+      <Setting name="APPINSIGHTS_INSTRUMENTATIONKEY" value="d4f78025-a127-4bd3-8e52-c0ef59c2c06d" />
+    </ConfigurationSettings>
+    <Certificates>
+      <Certificate name="Microsoft.WindowsAzure.Plugins.RemoteAccess.PasswordEncryption" thumbprint="4E056BCFFE560F65C375B547AF6AC4F9C967607F" thumbprintAlgorithm="sha1" />
+    </Certificates>
+  </Role>
+  <Role name="SnapshotWorkerRoleWithSBQueue">
+    <Instances count="1" />
+    <ConfigurationSettings>
+      <Setting name="Microsoft.WindowsAzure.Plugins.Diagnostics.ConnectionString" value="UseDevelopmentStorage=true" />
+      <Setting name="Microsoft.ServiceBus.ConnectionString" value="Endpoint=sb://dev-stepbystep-servicebus.servicebus.windows.net/;SharedAccessKeyName=RootManageSharedAccessKey;SharedAccessKey=YyjqHCeG53XCsia295XuiiXdZ/gyyUh41p0EgXuMtCs=" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteAccess.Enabled" value="true" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteAccess.AccountUsername" value="sailleshp" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteAccess.AccountEncryptedPassword" value="MIIBnQYJKoZIhvcNAQcDoIIBjjCCAYoCAQAxggFOMIIBSgIBADAyMB4xHDAaBgNVBAMME1dpbmRvd3MgQXp1cmUgVG9vbHMCEFKqsA08zHiQRhbcHjlLtF8wDQYJKoZIhvcNAQEBBQAEggEAWrGrew4+cdJZtuZWI1n7UxzZ1tazB34XqQrYXVknDpMjUnuwZ7zgBVox6FzQ3kOxm2p+PPTfxCiaAKNAPT0ApYChOtbEczkX22Fafki9clY9cwU3Vg0TpsMerBw9f35NoWPza/DS/28tXvZVoaiZyD/4XZc65VEVhTqt4D2jEYLms2uLzTaPoPpUtQoL9eiOQ6JOo036lQf36XnoLTJCMWuN9PzyczlDru3iHWtkAtBjbAmP8RYWW+/hsVBvZm6nGhcBANCNXDPQih2PZ4z6fLXX/N+8IzfBSnWOYtMDsPMc4FT0IZnpwCNrCWECNqeGRLuTocMsND5NbCcXmg+QGDAzBgkqhkiG9w0BBwEwFAYIKoZIhvcNAwcECLtVui7vQvSTgBDL5ixuSxeEpAbW9t0fhyOL" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteAccess.AccountExpiration" value="2019-09-22T23:59:59.0000000-07:00" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteForwarder.Enabled" value="true" />
+      <Setting name="APPINSIGHTS_INSTRUMENTATIONKEY" value="d4f78025-a127-4bd3-8e52-c0ef59c2c06d" />
+    </ConfigurationSettings>
+    <Certificates>
+      <Certificate name="Microsoft.WindowsAzure.Plugins.RemoteAccess.PasswordEncryption" thumbprint="4E056BCFFE560F65C375B547AF6AC4F9C967607F" thumbprintAlgorithm="sha1" />
+    </Certificates>
+  </Role>
+</ServiceConfiguration>
